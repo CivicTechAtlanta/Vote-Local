@@ -15,7 +15,7 @@
 				<div class="panel-body"><%= election.description %></div>
 			</div>
 		<% end %>
-	<% end%>
+	<% end %>
 </div>
 
 <!-- DISTRICT INFO SECTION -->
@@ -23,35 +23,35 @@
 	<h2>Learn about your districts</h2>
 	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
-	<% districts.each %>
-	  <div class="panel panel-default">
-	    <div class="panel-heading" role="tab" id="headingOne">
-	      <h4 class="panel-title">
-	        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-	          <%= district.type = ": " + district.name %>
-	        </a>
-	      </h4>
-	    </div>
-	    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-	      <div class="panel-body">
-	      	<!-- TODO: Add maps method for static district map image -->
-	      	<img class="img-responsive district-image" src="http://placehold.it/250x250">
-	      	<% if district.description %>
-		      	<h3>District Info</h3>
-	      		<p><%= district.description %></p>
-	      	<% end %>
-	      	<% if district.representative %>
-		      	<h3>Representative(s)</h3>
-	      		<p><%= district.representative %></p>
-	      	<% end %>
-	      	<h3>Get Involved</h3>
-	      	Link to external site
-	      	<h3>Updates</h3>
-	      	Insert RSS/Twitter feed
-	      </div>
-	    </div>
-	  </div>
-	<% end %>
+		<% districts.each %>
+		  <div class="panel panel-default">
+		    <div class="panel-heading" role="tab" id="headingOne">
+		      <h4 class="panel-title">
+		        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+		          <%= district.type = ": " + district.name %>
+		        </a>
+		      </h4>
+		    </div>
+		    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+		      <div class="panel-body">
+		      	TODO: Add maps method for static district map image
+		      	<img class="img-responsive district-image" src="http://placehold.it/250x250">
+		      	<% if district.description %>
+			      	<h3>District Info</h3>
+		      		<p><%= district.description %></p>
+		      	<% end %>
+		      	<% if district.representative %>
+			      	<h3>Representative(s)</h3>
+		      		<p><%= district.representative %></p>
+		      	<% end %>
+		      	<h3>Get Involved</h3>
+		      	Link to external site
+		      	<h3>Updates</h3>
+		      	Insert RSS/Twitter feed
+		      </div>
+		    </div>
+		  </div>
+		<% end %>
 	</div>
 </div>
 
