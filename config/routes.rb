@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'welcome#new'
   resources :welcome, only: [:new, :index]
+  resources :districts do
+    resources :officials
+    resources :events
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
