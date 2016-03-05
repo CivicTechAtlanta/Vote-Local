@@ -17,14 +17,15 @@ ActiveRecord::Schema.define(version: 20160305183213) do
   enable_extension "plpgsql"
 
   create_table "events", force: true do |t|
-    t.string "type"
-    t.string "district"
+    t.string  "type"
+    t.integer "district_id"
   end
 
   create_table "officials", force: true do |t|
-    t.string "name"
-    t.string "phone"
-    t.string "email"
+    t.string  "name"
+    t.string  "phone"
+    t.string  "email"
+    t.integer "district_id"
   end
 
 end

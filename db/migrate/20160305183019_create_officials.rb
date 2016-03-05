@@ -4,6 +4,7 @@ class CreateOfficials < ActiveRecord::Migration
       t.string :name
       t.string :phone
       t.string :email
+      t.integer :district_id
     end
   end
 end
