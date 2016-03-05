@@ -3,6 +3,6 @@ class WelcomeController < ApplicationController
   end
 
   def index
-    @geocoder = params['address']
+    @geocoder = Geocoder.coordinates params['address']
   end
 end
