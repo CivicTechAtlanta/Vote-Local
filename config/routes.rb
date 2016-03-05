@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   root to: 'welcome#new'
   resources :welcome, only: [:new, :index]
-  resources :officials
+  resources :districts do
+    resources :officials
+    resources :events
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,4 +1,4 @@
-class OfficialsController < ApplicationController
+class EventsController <ApplicationController
   def index
     #todo
   end
@@ -8,7 +8,7 @@ class OfficialsController < ApplicationController
   end
 
   def create
-    District.find(params[:district_id]).officials.create(official_params)
+    District.find(params[:district_id]).events.create(event_params)
     redirect_to welcome_path
   end
 
@@ -29,7 +29,7 @@ class OfficialsController < ApplicationController
   end
 
   private
-  def official_params
+  def event_params
     params.require(:name).permit(:phone, :email)
   end
 end
