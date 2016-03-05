@@ -13,6 +13,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 gem 'geocoder'
+gem 'rgeo'
+gem 'rgeo-geojson'
 
 group :development do
   gem 'better_errors'
