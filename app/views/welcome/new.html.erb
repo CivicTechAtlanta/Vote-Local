@@ -1,8 +1,9 @@
 <div class="row">
-	<p>Add you address so we know where you live</p>
+	<h1 class="text-center">Add you address so we know where you live</h1>
 
 	<%= form_tag(welcome_index_path, method: :get) do -%>
 	  <input type="text" class="form-control" placeholder="Address" name='address'>
-	  <div><%= submit_tag 'Save' %></div>
+	  <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+	<button type="button" class="btn btn-primary center-block">Submit</button>
 	<% end -%>
 </div>
