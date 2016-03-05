@@ -1,7 +1,8 @@
-<p>Add you address so we know where you live</p>
+<div class="row">
+	<p>Add you address so we know where you live</p>
 
-<%= form_tag(welcome_index_path, method: :get) do -%>
-  <input type="text" class="form-control" placeholder="Address" name='address'>
-  <div><%= submit_tag 'Save' %></div>
-<% end -%>
-
+	<%= form_tag(welcome_index_path, method: :get) do -%>
+	  <input type="text" class="form-control" placeholder="Address" name='address'>
+	  <div><%= submit_tag 'Save' %></div>
+	<% end -%>
+</div>
