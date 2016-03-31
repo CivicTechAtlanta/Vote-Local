@@ -1,0 +1,33 @@
+/* Mixins, Variables, etc. */
+@mixin shadow-z-1(){
+  box-shadow:
+    0 1px 6px 0 rgba(0, 0, 0, 0.12),
+    0 1px  6px 0 rgba(0, 0, 0, 0.12);
+}
+
+/* Header Styles */
+.site-header {
+	margin-top: 0.5em;
+}
+
+.header-logo {
+	height: 4em;
+	float: left;
+}
+
+.district-image {
+	float: right;
+}
+
+.emph {
+	font-size: 2em;
+	font-weight: 700;
+}
+
+/* Group Styles */
+.card-container {
+	padding: 1.5em;
+  border-radius: .25em;
+  background: #fff;
+	@include shadow-z-1;
+}

@@ -1,4 +1,18 @@
-<%= @geocoder %>
+<% provide(:title, "Results") %>
+
+<!--Only show if in dev env-->
+<% if Rails.env.development? %>
+<hr/>
+<pre>
+	DEBUG
+	------------
+	Geocoder coordinates: <%= @geocoder %>
+
+	Collection of Features: <%= @features %>
+	Matching Feature: <%= @feature %>
+</pre>
+<hr/>
+<% end %>
 
 <!-- UPCOMING ELECTIONS SECTION -->
 <div class="row">

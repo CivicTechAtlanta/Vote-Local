@@ -1,10 +1,16 @@
-<div class="row">
-	<h1 class="text-center">What Local Elections Affect Me?</h1>
+<%= provide(:title, "Home") %>
 
-	<%= form_tag(welcome_index_path, method: :get) do -%>
-	  <input type="text" class="form-control" placeholder="Address" name='address'>
-	  <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-    <br>
-    <div><%= submit_tag 'Find my Atlanta Elections!', class: "btn btn-primary center-block" %></div>
-	<% end -%>
+<div class="row">
+	<div class="card-container">
+		<h1 class="text-center">What Local Elections Affect Me?</h1>
+
+		<div class="form-group">
+			<%= form_tag(welcome_index_path, method: :get) do %>
+				<%= text_field_tag "address", "Your address", class: "form-control" %>
+			  <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+		    <br>
+		    <div><%= submit_tag 'Find Local Elections', class: "btn btn-primary center-block" %></div>
+			<% end %>
+		</div>
+	</div>
 </div>
