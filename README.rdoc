@@ -1,1 +1,5 @@
-Vote Early!
+# = Vote Local - Code for Atlanta project
+#
+# Copyright (C) 2016  Code For Atlanta
+#
+# 
