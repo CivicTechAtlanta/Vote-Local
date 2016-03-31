@@ -1,33 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Vote Atlanta</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title><%= full_title(yield (:title)) %></title>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+      <div class="container">
+      	<!-- TODO: Clean up header -->
 
-<div class="container">
-	<!-- TODO: Clean up header -->
+      	<%= render 'layouts/header' %>
 
-	<div class="header">
-		<%= image_tag("atlantaseal.png", class: "img-responsive header-logo", alt: "Seal of Atlanta")%>
-		<h1>Vote Atlanta</h1>
-	</div>
+      	<!-- TODO: If no address, insert intro welcome paragraph here -->
+        <div class="container">
+      	   <%= yield %>
+        </div>
+      	<!-- TODO: Move address field to this application -->
+      	<!-- TODO: Add autocomplete to address search -->
 
-	<!-- TODO: If no address, insert intro welcome paragraph here -->
-
-	<%= yield %> 
-	<!-- TODO: Move address field to this application -->
-	<!-- TODO: Add autocomplete to address search -->
-
-	<!-- TODO: Insert district data after location found -->
-
-
-</div>
-
-
-
-</body>
+      	<!-- TODO: Insert district data after location found -->
+        <%= render 'layouts/footer' %>
+      </div>
+  </body>
 </html>
